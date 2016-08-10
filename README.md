@@ -3,7 +3,7 @@
 Have docker installed and in $PATH
 
 ```
-alias condensation="docker run -v \`pwd\`:/particles --rm docker-condensation"
+alias condensation="docker run -v \`pwd\`:/particles --rm sungardas/condensation"
 
 condensation create project particles-MYPROJECT
 
