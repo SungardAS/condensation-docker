@@ -1,5 +1,7 @@
 # docker-condensation
 
+[![condensation][condensation-image]][condensation-url]
+
 ## Create an alias for condensation
 
 The following creates an alias for running a container that will:
