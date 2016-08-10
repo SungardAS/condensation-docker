@@ -2,7 +2,7 @@
 
 ## Create an alias for condensation
 
-The following example create an alias that will:
+The following creates an alias for running a container that will:
 
 * bind mount the host user aws credentials file to the container
 * expose any AWS environment variables that are set on the host for
