@@ -1,6 +1,6 @@
 # docker-condensation
 
-## Create an alias for condensation.
+## Create an alias for condensation
 
 The following example create an alias that will:
 
@@ -25,6 +25,20 @@ cd particles-MYPROJECT
 condensation run build
 ```
 
+### create
+
+A wrapper for [generator-condensation][generator-condensation-url].
+
+Appends arguments to `yo condensation:` within the container
+
+### run
+
+A wrapper for [condensation gulp tasks][condensation-tasks-url].
+
+Appends arguments to `/particles/node_modules/.bin/gulp` within the
+container.
+
+
 ## License
 
 Apache-2.0 ©
@@ -43,3 +57,5 @@ Blog: [http://blog.sungardas.com/CTOLabs/](http://blog.sungardas.com/CTOLabs/)
 [labs-logo]: https://raw.githubusercontent.com/SungardAS/repo-assets/master/images/logos/sungardas-labs-logo-small.png
 [condensation-image]: https://raw.githubusercontent.com/SungardAS/condensation/master/docs/images/condensation_logo.png
 [condensation-url]: https://github.com/SungardAS/condensation
+[condensation-tasks-url]: https://github.com/SungardAS/condensation#tasks
+[generator-condensation-url]: https://github.com/SungardAS/generator-condensation
