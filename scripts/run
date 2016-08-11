@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-/particles/node_modules/.bin/gulp condensation:"$@"
+npm run "$@"

@@ -2,6 +2,8 @@
 
 [![condensation][condensation-image]][condensation-url]
 
+Use docker to create, build and deploy [condensation][condensation-url] particles
+
 ## Create an alias for condensation
 
 The following creates an alias for running a container that will:
@@ -34,6 +36,14 @@ A wrapper for [generator-condensation][generator-condensation-url].
 Appends arguments to `yo condensation:` within the container
 
 ### run
+
+Appends arguments to `npm run` within the container.
+
+    $ condensation run test
+    $ condensation run build
+    $ condensation run deploy
+
+### run-task
 
 A wrapper for [condensation gulp tasks][condensation-tasks-url].
 
