@@ -40,6 +40,16 @@ A wrapper for [condensation gulp tasks][condensation-tasks-url].
 Appends arguments to `/particles/node_modules/.bin/gulp` within the
 container.
 
+### install
+
+A wrapper for `npm install` used to install particle
+dependencies.
+
+Appends arguments to `npm install --save` within the
+container.
+
+    condensation install particles-vpc
+
 
 ## License
 
