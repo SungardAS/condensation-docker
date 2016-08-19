@@ -9,6 +9,7 @@ ADD scripts/ /scripts/
 
 USER condensation
 
+VOLUME /home/condensation
 VOLUME /particles
 WORKDIR /particles
 
