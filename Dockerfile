@@ -1,9 +1,11 @@
 FROM node:4-slim
 
 RUN useradd -ms /bin/bash condensation
-RUN npm install -s -g yo generator-condensation
-RUN mkdir /particles
-RUN chown condensation /particles
+RUN npm install -s -g yo generator-condensation \
+  && npm cache clean
+
+RUN mkdir /particles \
+ && chown condensation /particles
 
 ADD scripts/ /scripts/
 
