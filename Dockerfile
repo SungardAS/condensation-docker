@@ -1,4 +1,4 @@
-FROM node:4-slim
+FROM node:6-slim
 
 # Yeoman does not run well as root inside a container
 # We create a `condensation` user to that will execute
@@ -12,14 +12,14 @@ RUN mkdir /particles \
 
 # Using ADD we can cache-bust anytime a new release of generator-condensation
 # is released
-ADD https://github.com/SungardAS/generator-condensation/archive/master.tar.gz /home/condensation
+ADD https://github.com/SungardAS/generator-condensation/archive/master.tar.gz /home/condensation/generator-condensation-master.tar.gz
 
 
 # Install Yeoman and generator-condensation globally and
 # clean up after ourselves.
-RUN npm install -s -g yo /home/condensation/master.tar.gz \
+RUN npm install -s -g yo /home/condensation/generator-condensation-master.tar.gz \
   && npm cache clean \
-  && rm /home/condensation/master.tar.gz
+  && rm /home/condensation/generator-condensation-master.tar.gz
 
 # Add all helper scripts
 ADD scripts/ /scripts/
