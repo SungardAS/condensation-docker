@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-yo condensation:"$@"
+yo --no-insight condensation:"$@"
