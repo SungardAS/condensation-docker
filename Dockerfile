@@ -1,5 +1,8 @@
 FROM node:6-slim
 
+# Support packages dependencies using git
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
 # Yeoman does not run well as root inside a container
 # We create a `condensation` user to that will execute
 # all commands.
@@ -13,7 +16,6 @@ RUN mkdir /particles \
 # Using ADD we can cache-bust anytime a new release of generator-condensation
 # is released
 ADD https://github.com/SungardAS/generator-condensation/archive/master.tar.gz /home/condensation/generator-condensation-master.tar.gz
-
 
 # Install Yeoman and generator-condensation globally and
 # clean up after ourselves.
