@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 
-npm install --save "$@"
+npm install --silent --save "$@"
