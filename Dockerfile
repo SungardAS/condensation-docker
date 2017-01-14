@@ -3,8 +3,8 @@ FROM node:6-slim
 # Support packages dependencies using git
 RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 
-# Yeoman does not run well as root inside a container
-# We create a `condensation` user to that will execute
+# Yeoman does not run well as root inside a container.
+# Create a `condensation` user that will execute
 # all commands.
 RUN useradd -ms /bin/bash condensation
 
