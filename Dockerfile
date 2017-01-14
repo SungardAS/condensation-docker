@@ -12,16 +12,10 @@ RUN useradd -ms /bin/bash condensation
 RUN mkdir /particles \
   && chown condensation /particles
 
-
-# Using ADD we can cache-bust anytime a new release of generator-condensation
-# is released
-ADD https://github.com/SungardAS/generator-condensation/archive/master.tar.gz /home/condensation/generator-condensation-master.tar.gz
-
 # Install Yeoman and generator-condensation globally and
 # clean up after ourselves.
-RUN npm install -s -g yo /home/condensation/generator-condensation-master.tar.gz \
-  && npm cache clean \
-  && rm /home/condensation/generator-condensation-master.tar.gz
+RUN npm install -s -g yo generator-condensation \
+  && npm cache clean
 
 # Add all helper scripts
 ADD scripts/ /scripts/
