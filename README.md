@@ -35,6 +35,18 @@ A wrapper for [generator-condensation][generator-condensation-url].
 
 Appends arguments to `yo condensation:` within the container
 
+```
+# Specific version of condensation
+# such as a release candidate
+> condensation create project particles-MYPROJECT --condensation-version rc
+
+# Or a specific version
+> condensation create project particles-MYPROJECT --condensation-version 0.5.9
+
+# Or any semver compatible string
+> condensation create project particles-MYPROJECT --condensation-version ^0.6.0
+```
+
 ### run
 
 Appends arguments to `npm run` within the container.
