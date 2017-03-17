@@ -10,7 +10,7 @@ RUN useradd -G node -ms /bin/bash condensation
 
 # This will be the the working directory for the contianer
 RUN mkdir /particles \
-  && chown condensation /particles
+  && chown condensation:node /particles
 
 # Install Yeoman and generator-condensation globally and
 # clean up after ourselves.
