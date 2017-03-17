@@ -6,12 +6,11 @@ RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 # Yeoman does not run well as root inside a container.
 # Create a `condensation` user that will execute
 # all commands.
-RUN useradd -G node -ms /bin/bash condensation
+RUN useradd -G root -ms /bin/bash condensation
 
 # This will be the the working directory for the contianer
 RUN mkdir /particles \
-  && chown condensation:node /particles \
-  && chmod 775 /particles
+  && chown condensation /particles
 
 # Install Yeoman and generator-condensation globally and
 # clean up after ourselves.
