@@ -4,6 +4,11 @@
 
 Use docker to create, build and deploy [condensation][condensation-url] particles
 
+**Note**
+This container is for development and should **not be run as root**.  A bind mount is created to the host in the current directory.  To do this [gosu][gosu-url] is used to match the `UID` and `GID` from the host to the running process in the container.
+
+On Mac this is the default state.  On linux add a non-root user to the `docker` group for development.
+
 ## Create an alias for condensation
 
 The following creates an alias for running a container that will:
